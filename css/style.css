@@ -1,0 +1,180 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.active{
+    font-weight: 900;
+    text-decoration: underline;
+    text-decoration-color: #e6bd43;
+    text-decoration-thickness: 3px;
+}
+
+.button
+{
+    font-weight: 900;
+    background-color: #e6bd43;
+    padding: 18px 30px;
+    margin: 4px 2px;
+    display: inline-block;
+    font-size: 16px;  
+}
+button {
+    box-shadow: none;
+    border: none;
+}
+
+#grid-container{
+    display: grid;
+    grid-template-areas:
+        "header" 
+        "main" 
+        "footer";
+
+}
+    header{
+        grid-area: header;  
+        display: grid;
+        justify-content: center;
+        text-align: center;
+
+    }
+    header a img{
+        height: auto;
+        margin-top: 2rem;
+    }
+
+    header nav{
+        list-style-type: none;
+        margin: 0;
+        padding: 1rem;
+    }
+    header nav li{
+        padding: .5rem;
+    }
+    header nav li a{
+        text-decoration: none;
+        color: #000;
+    }
+
+
+
+    main{
+        grid-area: main;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+    }
+    main section{
+        background-color: aquamarine;
+        padding: 1rem;
+    }
+    main section h1{
+        font-size: 2rem;        
+    }
+    main section p{
+        font-size: 1.2rem;
+        margin: 1rem;
+        
+    }
+    main section a{
+        text-decoration: none;
+        color: #000;
+        max-width: fit-content;     
+    }
+
+
+
+
+
+
+
+
+    footer{
+        grid-area: footer;
+        background-color: #252525;
+        display: grid;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+    }
+    footer a img{
+        width: 50%;
+        height: auto;
+        margin-top: 2rem;
+    }
+
+    footer ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 1rem;
+    }
+    footer ul li{
+        padding: .5rem;
+        display: inline-flex;
+    }
+    footer ul li a{
+        text-decoration: none;
+        color: #fff;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 900px){
+    #grid-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+            "header header header" 
+            "main main main" 
+            "footer footer footer";
+    }
+
+    .button:hover{
+        background-color: #000;
+        color: #e6bd43;
+    }
+
+    header{
+        grid-area: header;
+    
+    }
+    
+    main{
+        grid-area: main;
+    }
+    
+    footer{
+        grid-area: footer;
+    }
+    
+}
+
+
