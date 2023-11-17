@@ -2,7 +2,6 @@
     box-sizing: border-box;
 }
 body{
-    width: 100%;
     font-family: Arial, Helvetica, sans-serif;
 }
 .active{
@@ -12,14 +11,13 @@ body{
     text-decoration-thickness: 3px;
 }
 
-.button
-{
+.button{
     font-weight: 900;
     background-color: #e6bd43;
     padding: 18px 30px;
     margin: 4px 2px;
     display: inline-block;
-    font-size: 16px;  
+    font-size: 14px;  
 }
 button {
     box-shadow: none;
@@ -27,65 +25,142 @@ button {
 }
 
 #grid-container{
-    display: grid;
+    display: inline-grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
         "header" 
         "main" 
         "footer";
 
 }
+
     header{
         grid-area: header;  
-        display: grid;
-        justify-content: center;
         text-align: center;
 
     }
     header a img{
         height: auto;
-        margin-top: 2rem;
+        margin-top: 3rem;
     }
 
     header nav{
-        list-style-type: none;
         margin: 0;
-        padding: 1rem;
     }
-    header nav li{
-        padding: .5rem;
-    }
-    header nav li a{
+
+    header nav a{
         text-decoration: none;
         color: #000;
     }
+    header nav ul{
+        list-style: none;
+        margin: 0;
+        padding: 1rem;
+    }
+    header nav ul li{
+        padding: .5rem;
+    }
+
 
 
 
     main{
         grid-area: main;
-        align-self: center;
-        display: flex;
-        flex-direction: column;
         text-align: center;
 
     }
     main section{
-        background-color: aquamarine;
         padding: 1rem;
     }
     main section h1{
         font-size: 2rem;        
     }
     main section p{
-        font-size: 1.2rem;
-        margin: 1rem;
+        font-size: 1rem;
+        margin: auto;
+        max-width: 60%;
+        text-align: left;
         
     }
     main section a{
         text-decoration: none;
-        color: #000;
-        max-width: fit-content;     
+        color: #000;  
     }
+
+    #chead{
+        background-color: #17150e23;
+    }
+    #chead h1{
+        font-size: 2rem;
+        margin: auto;
+        max-width: 60%;
+        margin-bottom: 1.5rem;
+    }
+    #chead p{
+        font-size: 1rem;
+        margin: auto;
+        max-width: 70%;
+        text-align: center;
+    }
+    #chead a{
+        max-width: fit-content;
+        text-align: left;
+        margin: 1rem;
+    }
+    #sub{
+        margin: 3rem auto;
+        max-width: 70%;
+
+    }
+    #aoc{
+        background-color: #e6bd43;
+    }
+    #aoc img{
+        width: 80%;
+        margin: 2rem;
+    }
+    #aoc h3{
+        font-size: 1.25rem;
+        margin: 1rem auto;
+        text-align: left;
+        max-width: 55%;
+    }
+    #aoc p{
+        font-size: 1rem;
+        margin: 1rem auto;
+        text-align: left;
+        max-width: 55%;
+    }
+    #aoc a{
+        max-width: 55%;
+        margin: 1rem;
+        border: #000 solid 3px;
+        text-align: left;
+    }
+    #serv{
+        margin: 3rem 3rem;
+    }
+    #serv h3{
+        font-size: 1.5rem;
+    }
+    #serv i{
+        font-size: 2rem;
+        margin: .5rem;
+    }
+    #news{
+        background-color: #25252521;
+        padding: 3rem;
+        max-width: 100%;
+    }
+    #news input{
+        padding: 1rem;
+        margin: .5rem;
+        border: none;
+        max-width: 60%;
+    }
+
+    
 
 
 
@@ -97,29 +172,24 @@ button {
     footer{
         grid-area: footer;
         background-color: #252525;
-        display: grid;
-        justify-content: center;
         text-align: center;
         color: #fff;
     }
     footer a img{
-        width: 50%;
-        height: auto;
-        margin-top: 2rem;
+        margin-top: 4rem;
+        height: 40%;
     }
 
     footer ul{
         list-style-type: none;
-        margin: 0;
-        padding: 1rem;
+        padding: 0;
+
     }
     footer ul li{
-        padding: .5rem;
-        display: inline-flex;
-    }
-    footer ul li a{
-        text-decoration: none;
-        color: #fff;
+        display: inline;
+        font-size: 1.8rem;
+        padding: 1rem;
+
     }
 
 
@@ -139,18 +209,11 @@ button {
 
 
 
-
-
-
-
-
-
-
-@media only screen and (min-width: 900px){
+/* @media only screen and (min-width: 900px){
     #grid-container{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, auto);
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px auto auto;
         grid-template-areas: 
             "header header header" 
             "main main main" 
@@ -177,4 +240,4 @@ button {
     
 }
 
-
+ */
