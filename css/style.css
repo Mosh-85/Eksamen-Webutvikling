@@ -14,10 +14,11 @@ body{
 .button{
     font-weight: 900;
     background-color: #e6bd43;
-    padding: 18px 30px;
-    margin: 4px 2px;
+    padding: 18px 10px;
     display: inline-block;
-    font-size: 14px;  
+    text-decoration: none;
+    color: #000;
+    width: fit-content;
 }
 button {
     box-shadow: none;
@@ -144,21 +145,98 @@ button {
     #serv h3{
         font-size: 1.5rem;
     }
+    #serv article{
+        margin: 3rem 2rem;
+    }
     #serv i{
         font-size: 2rem;
         margin: .5rem;
     }
+    #serv h4{
+        font-size: 1.25rem;
+        margin: .5rem;
+    }
     #news{
         background-color: #25252521;
-        padding: 3rem;
-        max-width: 100%;
+        padding: 3rem 0;
+    }
+    #news h3{
+        font-size: 1.5rem;
+        margin: 1rem;
     }
     #news input{
-        padding: 1rem;
-        margin: .5rem;
+        padding: 1rem 0;
         border: none;
-        max-width: 60%;
     }
+    
+    /* about.html */
+    #about{
+        background-color: #252525;
+        padding: 3rem 0;
+    }
+    #comp{
+        margin: 1rem 2rem;
+        padding: 2rem;
+        background-color: rgba(255, 255, 255, 0.293);
+        text-align: left;
+    }
+    #comp h2{
+        font-size: 1rem;
+    }
+    #client{
+        background-color: #e6bd43;
+        padding: 3rem 0;
+        text-align: center;
+    }
+    #client h3{
+        margin: 1rem 0 3rem 0;
+    }
+    #client article img{
+        /* max-width:80%; */
+        margin: 1rem;
+    }
+    #contact{
+        background-color: #a0a0a0;
+    }
+    #contact h3{
+        margin: 0rem 0 3rem 0;
+        padding: 5rem 0 0 0;
+        text-align: center;
+    }
+    #contact form{
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        padding-left: 2rem;
+    }
+    #contact form label{
+        margin: .5rem 0;
+    }
+    #contact form input, textarea{
+        padding: 1rem 0;
+        border: none;
+        max-width: 80%;
+    }
+    #contact form button{
+        margin: 1rem 0;
+    }
+    #contact article{
+        padding: 3rem 2rem;
+        text-align: left;
+    }
+    #contact article p{
+        margin: 1rem 0;
+    }  
+    #contact article ul{
+        list-style-type: none;
+        padding: 0;
+
+    }
+    #contact article i{
+        font-size: 1rem;
+        margin: .5rem 1rem 0 0;
+    }
+  
 
     
 
@@ -190,6 +268,10 @@ button {
         font-size: 1.8rem;
         padding: 1rem;
 
+    }
+    footer ul li a{
+        text-decoration: none;
+        color: #fff;
     }
 
 
