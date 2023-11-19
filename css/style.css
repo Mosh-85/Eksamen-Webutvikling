@@ -4,6 +4,46 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
+
+/* .pos .center har jeg brukt https://www.w3schools.com/howto/howto_css_image_text.asp  ref lnk 3 */
+.pos{
+    position: relative;
+    text-align: center;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 1rem;
+}
+
+.flex-container h1{
+    flex-basis: 100%;
+    text-align: center;
+}
+.flex-container h2{
+    flex-basis: 100%;
+}
+.flex-container h3{
+    flex-basis: 100%;
+}
+.flex-container article{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+.flex-container article img{
+    width: 80%;
+    align-self: center;
+}
+
 .active{
     font-weight: 900;
     text-decoration: underline;
@@ -79,16 +119,12 @@ button {
         grid-area: main;
 
     }
-    main section{
-        padding: 1rem;
-    }
     main section h1{
         font-size: 2rem;        
     }
     main section p{
         font-size: 1rem;
-        margin: auto;
-        max-width: 60%;
+        margin: 1rem auto;
         text-align: left;
         
     }
@@ -96,21 +132,19 @@ button {
         text-decoration: none;
         color: #000;  
     }
-
-    #chead{
-        background-color: #17150e23;
-        text-align: center;
+    #chead div{
+        margin: 0 auto;
+        width: 80%;
+    }
+    #chead img{
+        width: 100%;
     }
     #chead h1{
-        font-size: 2rem;
-        margin: auto;
-        max-width: 60%;
-        margin-bottom: 1.5rem;
+        margin: 0 auto 1.5rem;
+        max-width: 80%;
+        padding-top: 2rem;
     }
     #chead p{
-        font-size: 1rem;
-        margin: auto;
-        max-width: 70%;
         text-align: center;
     }
     #chead a{
@@ -153,12 +187,10 @@ button {
     #serv{
         margin: 3rem 3rem;
         text-align: center;
+        justify-content: center;
     }
     #serv h3{
         font-size: 1.5rem;
-    }
-    #serv article{
-        margin: 3rem 2rem;
     }
     #serv i{
         font-size: 2rem;
@@ -182,13 +214,15 @@ button {
         border: none;
     }
     /* portfolio.html */
+
+    
+
     #port{
         text-align: left;
     }
-    #port h1{
-        position: absolute;   
-        top: 570px;
-        left: 130px; 
+    #port img{
+        width: 100%;
+        margin: 1rem 0;
     }
     main article h2, section h2{
         font-size: 1.5rem;
@@ -200,7 +234,7 @@ button {
         color: #000;
     }
     section article img{
-        width: 50%;
+
     }
     
 
@@ -348,12 +382,16 @@ button {
     }
 
     header{
-        grid-area: header;
+        grid-area: header header header;
     
     }
     
     main{
-        grid-area: main;
+        grid-area: main main main;
+        #aoc{
+            display: flex;
+
+        }
     }
     
     footer{
