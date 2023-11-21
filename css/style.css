@@ -16,13 +16,13 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 .flex-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
     gap: 1rem;
 }
-
 .flex-container h1{
     flex-basis: 100%;
     text-align: center;
@@ -43,14 +43,12 @@ body{
     width: 80%;
     align-self: center;
 }
-
 .active{
     font-weight: 900;
     text-decoration: underline;
     text-decoration-color: #e6bd43;
     text-decoration-thickness: 3px;
 }
-
 .button{
     font-weight: 900;
     background-color: #e6bd43;
@@ -60,20 +58,19 @@ body{
     color: #000;
     width: fit-content;
 }
-.boxbutton li{
+.boxbutton{
     font-weight: 600;
     padding: 18px 10px;
     display: inline-block;
     text-decoration: none;
     color: #000;
-    width: fit-content;
     border: #000 solid 2px;
+    
 }
 button {
     box-shadow: none;
     border: none;
 }
-
 #grid-container{
     display: inline-grid;
     grid-template-columns: 1fr;
@@ -82,7 +79,6 @@ button {
         "header" 
         "main" 
         "footer";
-
 }
 
     header{
@@ -132,17 +128,19 @@ button {
         text-decoration: none;
         color: #000;  
     }
-    #chead div{
-        margin: 0 auto;
-        width: 80%;
+    #chaed{
+        max-width: 80%;
     }
     #chead img{
         width: 100%;
     }
-    #chead h1{
-        margin: 0 auto 1.5rem;
-        max-width: 80%;
-        padding-top: 2rem;
+    #chead video{
+        display: none;
+    }
+    #chead div{
+        max-width: 100%;
+        text-align: center;
+        min-width: 280px;
     }
     #chead p{
         text-align: center;
@@ -150,7 +148,6 @@ button {
     #chead a{
         max-width: fit-content;
         text-align: left;
-        margin: 1rem;
     }
     #sub{
         margin: 3rem auto;
@@ -185,10 +182,11 @@ button {
         text-align: left;
     }
     #serv{
-        margin: 3rem 3rem;
+        margin: 3rem 0;
         text-align: center;
         justify-content: center;
     }
+
     #serv h3{
         font-size: 1.5rem;
     }
@@ -198,7 +196,12 @@ button {
     }
     #serv h4{
         font-size: 1.25rem;
-        margin: .5rem;
+        margin: .5rem 0;
+    }
+    #serv p{
+        font-size: 1rem;
+        margin: auto;
+        max-width: 50%;
     }
     #news{
         background-color: #25252521;
@@ -213,9 +216,21 @@ button {
         padding: 1rem 0;
         border: none;
     }
+
+
+
     /* portfolio.html */
 
-    
+    main article nav ul{
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding: 1rem;
+    }
+    main article nav ul li{
+        padding: .5rem;
+    }
 
     #port{
         text-align: left;
@@ -229,24 +244,15 @@ button {
         padding-bottom: 1rem;
         border-bottom: 5px solid #e6bd43 /* Brukt google søk for å finne hvordan denne koden fungerer(Ref link 1) */    
     }
-    main article nav ul li a{
-        text-decoration: none;
-        color: #000;
-    }
-    section article img{
-
-    }
-    
-
     /* End */
-
-
 
 
     /* about.html */
     #about{
         background-color: #252525;
         padding: 3rem 0;
+        display: inline-grid;
+        justify-items: end;
     }
     #comp{
         margin: 1rem 2rem;
@@ -269,12 +275,15 @@ button {
         margin: 1rem;
     }
     #contact{
-        background-color: #a0a0a0;
+        background-color: #f2f0f0;
     }
     #contact h3{
         margin: 0rem 0 3rem 0;
         padding: 5rem 0 0 0;
         text-align: center;
+    }
+    #contact div{
+        margin: auto;
     }
     #contact form{
         text-align: left;
@@ -328,7 +337,7 @@ button {
         color: #fff;
     }
     footer a img{
-        margin-top: 4rem;
+        margin-top: 2rem;
         height: 40%;
     }
 
@@ -349,27 +358,11 @@ button {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media only screen and (min-width: 900px){
+@media only screen and (min-width: 880px){
     #grid-container{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 50px auto auto;
+        grid-template-rows: auto auto auto;
         grid-template-areas: 
             "header header header" 
             "main main main" 
@@ -380,24 +373,157 @@ button {
         background-color: #000;
         color: #e6bd43;
     }
+    .boxbutton:hover{
+        background-color: #000;
+        color: #e6bd43;
+
+    }
+    /* https://css-tricks.com/a-fancy-hover-effect-for-your-avatar/ ref link 4 */
+    .zoom img:hover{
+        transition: 1s;
+        transform: scale(1.5);
+    }
+
+    .flex-container article{
+        flex-basis: 22%;
+    }
+    body{
+        max-width: 1600px;
+        margin:auto;
+    }
 
     header{
-        grid-area: header header header;
-    
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 2rem;
     }
-    
-    main{
-        grid-area: main main main;
-        #aoc{
-            display: flex;
+    header a img{
+        height: 100%;
+        margin-top: 0;
+    }
+    header nav{
+        display: flex;
+        align-items: center;
+    }
+    header nav ul{
+        display: flex;
+        align-items: center;
+    }
+    header nav ul li{
+        display: inline;
+    }  
+    #chead img{
+        display: none;
+    }
+    #chead video{
+        display: block;
+        width: 100%;
+    }
+    #chead div{
+        margin: 0 auto;
+        width: 80%;
+        background-color: transparent;
+    }
 
-        }
+    #aoc{
+        display: flex;
+
+    }
+    #aoc div{
+        margin: 0 auto;
+        text-align: left;
+        align-content: center;
+        display: grid;
+
+
+    }
+    #aoc p {
+        font-size: 1rem;
+        margin: 0;
+        text-align: left;
+        max-width: 80%;
+    }
+    #aoc h3{
+        font-size: 1.5rem;
+        text-align: left;
+        margin: 2rem 0;
+    }
+    #aoc a{
+        margin:1rem 0;
+    }
+
+    /* portfolio.html  */
+
+    #branding #design #dev{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #branding article, #design article, #dev article{
+        flex-basis: 30%;
     }
     
+    /* end */
+
+
+     /* about.html */
+
+    
+
+    #comp{
+        max-width: 40%;
+    }
+
+
+
+    #contact{
+        display: grid;
+        padding: 2rem 0;
+    }
+    #contact div{
+        display: flex;
+        align-items: center;
+    }
+
+    #contact form{
+        flex-basis: 50%;
+    }
+
+    #contact article{
+        flex-basis: 50%;
+    
+        padding: 2rem;
+
+    }
+    /* end */
+
+   
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
     footer{
-        grid-area: footer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    footer a img , footer ul{
+        margin: 2rem;
     }
     
+
 }
 
 
