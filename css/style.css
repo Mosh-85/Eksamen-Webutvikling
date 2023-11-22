@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 body{
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Red Hat Display', sans-serif;
 }
 /* ref link 3 */
 .pos{
@@ -134,9 +134,6 @@ button {
         padding: .5rem;
     }
 
-
-
-
     main{
         grid-area: main;
 
@@ -144,7 +141,7 @@ button {
 
     main section p{
         font-size: 1rem;
-        /* margin: 1rem auto; */
+        margin: 1rem auto;
         text-align: center;
         width: 80%;
         
@@ -172,6 +169,7 @@ button {
     }
     #chead p{
         text-align: center;
+        margin-left: auto;
     }
     #chead a{
         max-width: fit-content;
@@ -243,6 +241,7 @@ button {
     #news input{
         padding: 1rem 0;
         border: none;
+        width: 60%;
     }
 
 
@@ -371,16 +370,6 @@ button {
 
     /* End */
   
-
-    
-
-
-
-
-
-
-
-
     footer{
         grid-area: footer;
         background-color: #252525;
@@ -512,6 +501,10 @@ button {
         margin:1rem 0;
     }
 
+    #news input{
+        width: 30%;
+    }
+
     /* portfolio.html  */
 
     #port{
@@ -523,7 +516,6 @@ button {
         height: 500px;
         object-fit: cover;  /* ref link 6 */
     }
-
     #branding #design #dev{
         display: flex;
         justify-content: space-between;
@@ -534,7 +526,9 @@ button {
     }
     main section p{
         text-align: left;
+        margin-left: 0;
     }
+
     
     /* end */
 
