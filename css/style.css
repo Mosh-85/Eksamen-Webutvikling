@@ -2,20 +2,33 @@
     box-sizing: border-box;
 }
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Patrick Hand', cursive;
 }
-
-/* .pos .center har jeg brukt https://www.w3schools.com/howto/howto_css_image_text.asp  ref lnk 3 */
+/* ref link 3 */
 .pos{
     position: relative;
     text-align: center;
 }
-.center{
+.centerhead{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.center{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text-about{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* ref link 3 end */
 
 .flex-container{
     display: flex;
@@ -37,11 +50,24 @@ body{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: center;
 }
 .flex-container article img{
     width: 80%;
     align-self: center;
+}
+.flex-container-services{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.flex-container-services h3{
+    flex-basis: 100%;
+    text-align: center;
+}
+.flex-container-services article{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 .active{
     font-weight: 900;
@@ -115,13 +141,12 @@ button {
         grid-area: main;
 
     }
-    main section h1{
-        font-size: 2rem;        
-    }
+
     main section p{
         font-size: 1rem;
-        margin: 1rem auto;
-        text-align: left;
+        /* margin: 1rem auto; */
+        text-align: center;
+        width: 80%;
         
     }
     main section a{
@@ -133,7 +158,9 @@ button {
     }
     #chead img{
         width: 100%;
-    }
+        height: 450px;
+        object-fit: cover;  /* ref link 6 */
+    }    
     #chead video{
         display: none;
     }
@@ -141,6 +168,7 @@ button {
         max-width: 100%;
         text-align: center;
         min-width: 280px;
+        background-color: rgba(254, 254, 254, 0.801);
     }
     #chead p{
         text-align: center;
@@ -221,6 +249,24 @@ button {
 
     /* portfolio.html */
 
+    #port h1{
+        background-color: rgba(254, 254, 254, 0.801);
+    }
+    #port{
+        text-align: left;
+        font-size: 2rem;
+        
+    }
+    #port img{
+        width: 100%;
+        height: 200px;
+        object-fit: cover;  /* ref link 6 */
+        margin: 1rem 0;     
+    }
+    #narrow{
+        width: 95%;
+        margin: auto;
+    }
     main article nav ul{
         display: flex;
         flex-wrap: wrap;
@@ -231,38 +277,31 @@ button {
     main article nav ul li{
         padding: .5rem;
     }
-
-    #port{
-        text-align: left;
-    }
-    #port img{
-        width: 100%;
-        margin: 1rem 0;
-    }
-    #narrow{
-        width: 95%;
-        margin: auto;
-    }
     main article h2, section h2{
         font-size: 1.5rem;
         padding-bottom: 1rem;
-        border-bottom: 5px solid #e6bd43 /* Brukt google søk for å finne hvordan denne koden fungerer(Ref link 1) */    
+        border-bottom: 5px solid #e6bd43; /* Brukt google søk for å finne hvordan denne koden fungerer(Ref link 1) */    
     }
     /* End */
 
 
     /* about.html */
+
+
     #about{
-        background-color: #252525;
         padding: 3rem 0;
-        display: inline-grid;
-        justify-items: end;
+        width: 100%;
+    }
+    #about img{
+        width: 100%;
+        height: 650px;
+        object-fit: cover;  /* ref link 6 */
     }
     #comp{
-        margin: 1rem 2rem;
         padding: 2rem;
-        background-color: rgba(255, 255, 255, 0.293);
+        background-color: rgba(254, 254, 254, 0.801);
         text-align: left;
+        width: 80%;
     }
     #comp h2{
         font-size: 1rem;
@@ -322,6 +361,14 @@ button {
         font-size: 1rem;
         margin: .5rem 1rem 0 0;
     }
+    iframe{
+
+        width: 100%;
+        height: 400px;}
+
+
+
+
     /* End */
   
 
@@ -362,7 +409,7 @@ button {
     }
 
 
-@media only screen and (min-width: 880px){
+@media only screen and (min-width: 975px){
     #grid-container{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -383,13 +430,20 @@ button {
 
     }
     /* https://css-tricks.com/a-fancy-hover-effect-for-your-avatar/ ref link 4 */
-    .zoom img:hover{
+    .zoom article:hover{
         transition: 1s;
-        transform: scale(1.5);
+        transform: scale(1.2);
+    }
+
+    .flex-container-services article{
+        flex-basis: 22%;
     }
 
     .flex-container article{
+        max-width: 692px;
+        flex-direction: row;
         flex-basis: 22%;
+        flex-grow: 1;
     }
     body{
         max-width: 1600px;
@@ -422,6 +476,8 @@ button {
     #chead video{
         display: block;
         width: 100%;
+        height: 400px;
+        object-fit: cover;  /* ref link 6 */
     }
     #chead div{
         margin: 0 auto;
@@ -458,6 +514,16 @@ button {
 
     /* portfolio.html  */
 
+    #port{
+        font-size: 6rem;
+    }
+
+    #port img{
+        width: 100%;
+        height: 500px;
+        object-fit: cover;  /* ref link 6 */
+    }
+
     #branding #design #dev{
         display: flex;
         justify-content: space-between;
@@ -466,13 +532,23 @@ button {
     #branding article, #design article, #dev article{
         flex-basis: 30%;
     }
+    main section p{
+        text-align: left;
+    }
     
     /* end */
 
 
      /* about.html */
 
-    
+     
+     .text-about{
+        left: 75%;
+    }
+
+    #about img{
+        height: 500px;
+    }
 
     #comp{
         max-width: 40%;
@@ -502,19 +578,6 @@ button {
     /* end */
 
    
-
-
-    
-
-
-
-
-
-
-
-
-
-
 
 
     footer{
