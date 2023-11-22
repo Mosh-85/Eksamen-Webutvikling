@@ -239,6 +239,10 @@ button {
         width: 100%;
         margin: 1rem 0;
     }
+    #narrow{
+        width: 95%;
+        margin: auto;
+    }
     main article h2, section h2{
         font-size: 1.5rem;
         padding-bottom: 1rem;
